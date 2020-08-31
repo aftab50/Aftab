@@ -279,6 +279,18 @@ def pilih_super():
 			print '\x1b[1;96m[!] \x1b[1;91mFile Not Found'
 			raw_input('\n\x1b[1;96m[ \x1b[1;97mBack \x1b[1;96m]')
 			super()
+			elif peak =="4":
+		os.system('clear')
+		print logo
+		print 42*"\033[1;96m="
+		try:
+			idlist = raw_input('\x1b[1;96m[+] \x1b[1;93mMasukan nama file  \x1b[1;91m: \x1b[1;97m')
+			for line in open(idlist,'r').readlines():
+				id.append(line.strip())
+		except IOError:
+			print '\x1b[1;96m[!] \x1b[1;91mFile tidak ditemukan'
+			raw_input('\n\x1b[1;96m[ \x1b[1;97mKembali \x1b[1;96m]')
+			super()
 	elif peak =="0":
 		menu()
 	else:
